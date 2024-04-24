@@ -33,13 +33,13 @@
 				    <cloudhub2Deployment>
 				      <uri>https://anypoint.mulesoft.com</uri>
 				      <provider>MC</provider>
-				      <environment>${environment}</environment>
-				      <target>${targetName}</target>
+				      <environment>Sandbox</environment>
+				      <target>Cloudhub-US-East-2</target>
 				      <muleVersion>4.5.3</muleVersion>
 				      <server>anypoint-exchange-v3</server>
-				      <applicationName>${appName}</applicationName>
+				      <applicationName>demoapp</applicationName>
 				      <replicas>1</replicas>
-				      <vCores>1</vCores>
+				      <vCores>0.1</vCores>
 				      <deploymentSettings>
 				        <http>
 				          <inbound>
@@ -48,6 +48,12 @@
 				          </inbound>
 				        </http>
 				      </deploymentSettings>
+					    <properties>
+						  <remote.api.clientId>8081</remote.api.clientId>
+					    </properties>
+					    <secureProperties>
+						  <remote.api.clientSecret>8081</remote.api.clientSecret>
+					    </secureProperties>
 				    </cloudhub2Deployment>
 				  </configuration>
 			</plugin>
